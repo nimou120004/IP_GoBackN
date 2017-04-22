@@ -240,7 +240,7 @@ int main(int argc, char* argv[])
     serveraddr.sin_family = AF_INET;
     bcopy((char *)server->h_addr, 
 	(char *)&serveraddr.sin_addr.s_addr, server->h_length);
-    serveraddr.sin_port = htons(PORT);	
+    serveraddr.sin_port = htons(servport);	
 	slen = sizeof(serveraddr);
 
     //Spawn recv thread
